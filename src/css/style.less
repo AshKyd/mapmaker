@@ -1,0 +1,51 @@
+@import './bootstrap.less';
+@import './leaflet.less';
+@import './leaflet-draw.less';
+
+#map{
+	position:absolute;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+}
+
+#proppane{
+	background:#f8f8f8;
+	box-shadow:-2px 0 5px rgba(0,0,0,.08);
+	transform:translateZ(0);
+	position:absolute;
+	right:0;
+	top:0;
+	bottom:0;
+	width:300px;
+	overflow:auto;
+	transition: all 0.2s;
+}
+
+.workspace{
+	position:absolute;
+	top:51px;
+	bottom:50px;
+	left:0;
+	right:0;
+	overflow: hidden;
+}
+
+.modal .addendum{
+	font-weight: normal;
+	color:#444;
+}
+.modal .btn{
+	display:block;
+	margin:0 auto 10px;
+	max-width:66%;
+}
+
+// Top left header
+.navbar-header{
+	width:50%;
+	.form-inline{
+		margin-top:8px;
+	}
+}

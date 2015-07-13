@@ -1,0 +1,87 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "title": "Name",
+            "$ref": "#/definitions/name"
+        },
+        "description": {
+            "title": "Description",
+            "$ref": "#/definitions/wysiwyg"
+        },
+        "style": {
+            "type": "object",
+            "properties": {
+                "fillColor": {
+                    "title": "Fill color",
+                    "$ref": "#/definitions/cssColor",
+                    "default": "#80D3F4"
+                },
+                "fillOpacity": {
+                    "title": "Fill opacity",
+                    "$ref": "#/definitions/rangeOne",
+                    "default": 0,
+                    "minimum": 0,
+                    "maximum": 1,
+                    "step":0.05
+                },
+                "color": {
+                    "title": "Stroke color",
+                    "$ref": "#/definitions/cssColor",
+                    "default": "#80D3F4"
+                },
+                "opacity": {
+                    "title": "Stroke opacity",
+                    "$ref": "#/definitions/rangeOne",
+                    "default": 0.8,
+                    "minimum": 0,
+                    "maximum": 1,
+                    "step": 0.05
+                }
+            },
+        },
+        "marker": {
+            "type": "object",
+            "properties": {
+                "icon": {
+                    "title": "Icon colour",
+                    "$ref": "#/definitions/marker"
+                }
+            },
+        }
+    },
+    "definitions": {
+        "name": {
+            "type": "string",
+            "format": "text"
+        },
+        "number": {
+            "type": "number",
+            "format": "number"
+        },
+        "rangeOne": {
+            "type": "number",
+            "format": "range"
+        },
+        "wysiwyg": {
+            "type": "string",
+            "format": "textarea"
+        },
+        "cssColor": {
+            "type": "string",
+            "format": "color"
+        },
+        "marker": {
+            "type": "string",
+            "format": "select",
+            "enum": [
+                "Red",
+                "Orenge",
+                "Yellow",
+                "Green",
+                "Blue",
+                "Violet"
+            ]
+        }
+    }
+}

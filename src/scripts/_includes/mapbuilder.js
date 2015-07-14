@@ -186,9 +186,9 @@ MapBuilder.prototype = {
                         .on('click', _this.layerOnClick)
                         .addTo(_this.drawnItems);
                     _this.propPaneLoad(newMarker);
-                    $('input[name="root[name]"]')
-                        .val(result.name)
-                        .trigger('change');
+                    var val = _this.editor.getValue();
+                    val.name = result.name;
+                    _this.editor.setValue(val);
                     _this.searchPoint = undefined;
                 });
             }
